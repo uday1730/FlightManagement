@@ -1,0 +1,286 @@
+:root {
+  --primary-color: rgb(80, 118, 200);;
+  --text-color: #333;
+  --background-color: #121212;
+  --card-background: #fff;
+  --border-radius: 8px;
+  --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --hover-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+ 
+body {
+  font-family: 'Inter', sans-serif;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  line-height: 1.6;
+  margin-top: 110px;
+  padding: 0;
+}
+ 
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #121212;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+ 
+/* Navbar layout */
+.navbar {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+ 
+/* Left side of the navbar (logo and title) */
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+}
+ 
+.logo {
+    width: 36px;
+    height: 36px;
+    border-radius: 6px;
+}
+ 
+.userlogo {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+ 
+.site-title .brand {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: white;
+}
+ 
+.site-title .sub {
+    font-size: 0.8rem;
+    color: white;
+}
+ 
+/* Middle of the navbar (home pill) */
+.nav-center {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+ 
+/* Pill-shaped links and buttons */
+.home-pill,
+.pill,
+.dropdown-toggle {
+    color: white;
+    padding: 8px 14px;
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+    background: none;
+    border: none;
+    cursor: pointer;
+    box-shadow: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+ 
+.nav-right {
+    display: flex;
+    gap: 10px;
+}
+ 
+/* Hover effects for pills and dropdown toggle */
+
+/* Hover effects for pills and dropdown toggle */
+.hover-pill:hover,
+.dropdown-toggle:hover {
+    background: white;
+    color: black;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.35);
+}
+ 
+.hover-pill,
+.dropdown-toggle {
+    transition: transform 0.2s;
+}
+ 
+.hover-pill:hover,
+.dropdown-toggle:hover {
+    transform: translateY(-2px);
+}
+
+/* Dropdown container */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown menu styling */
+.dropdown-menu {
+    display: none;
+}
+
+/* Show dropdown when toggled */
+.dropdown-menu.show {
+    display: block;
+}
+
+/* Logout link inside dropdown */
+.logout-link {
+    display: block;
+    position: fixed;
+    background-color: rgb(80, 118, 200);
+    padding: 8px 14px;
+    right: 50px;
+    top: 55px;
+    z-index: 1000;
+    border-radius: 5px;
+    min-width: 40px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: small;
+    border: none;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+}
+
+/* Hover effect for logout */
+.logout-link:hover {
+    background-color: white;
+    color: red;
+}
+
+ 
+/* Theme toggle button */
+.theme-toggle-btn {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: none;
+    padding-bottom: 3px;
+    color: white;
+    cursor: pointer;
+}
+
+
+.container {
+    margin-bottom: 2px;
+}
+.content {
+    padding-bottom:2px;
+}
+.hero {
+  text-align: center;
+  margin-bottom: 60px;
+}
+ 
+.hero h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+ 
+.lead {
+  font-size: 1.1rem;
+  color: #666;
+}
+ 
+.features-section h2 {
+  font-size: 1.8rem;
+  margin-top:-40px;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #56c056;
+}
+ 
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem 2rem; /* row gap and column gap */
+  padding: 0 40px; /* left and right spacing */
+}
+ 
+.feature-title-div{
+  min-width: 20px;  
+}
+.feature-title{
+  color:#56c056;
+  font-size: 20px;
+  font-weight: bolder;
+}
+.feature-description {
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  color: #f0f2f5;
+}
+ 
+.feature-card {
+  background-color: #262a2d;
+  border-radius: 25px;
+  box-shadow: var(--shadow);
+  padding: 1rem;
+  text-align: center;
+  text-decoration: none;
+  color: var(--text-color);
+  transition: transform 0.2s, box-shadow 0.2s;
+  display: block;
+  cursor:pointer;
+}
+ 
+ 
+.features-icons{
+    width:65px;
+    height:65px;
+}
+ 
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--hover-shadow);
+}
+ 
+.feature-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-color);
+  margin-bottom: 0.3rem;
+  min-height: 90px;
+}
+ 
+.feature-icon svg {
+  width: 48px;
+  height: 48px;
+}
+ 
+.feature-card h3 {
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+ 
+.feature-card p {
+  font-size: 0.9rem;
+  color: #777;
+}
+ 
+.site-footer {
+  text-align: center;
+  padding: 1.5rem 0;
+  color: #888;
+  font-size: 0.8rem;
+}

@@ -1,0 +1,594 @@
+@charset "UTF-8";
+
+body {
+    margin-top: 100px;
+    font-family: 'Segoe UI', sans-serif;
+    background-color:  #121212;
+    color:white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    scroll-behavior: smooth;
+}
+ 
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #121212;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+ 
+/* Navbar layout */
+.navbar {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+ 
+/* Left side of the navbar (logo and title) */
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+}
+ 
+.logo {
+    width: 36px;
+    height: 36px;
+    border-radius: 6px;
+}
+ 
+.userlogo {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+ 
+.site-title .brand {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: white; /* Ensure text is visible on the blue background */
+}
+ 
+.site-title .sub {
+    font-size: 0.8rem;
+    color: white;
+}
+ 
+/* Middle of the navbar (home pill) */
+.nav-center {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+ 
+/* Pill-shaped links and buttons */
+.home-pill,
+.pill,
+.dropdown-toggle {
+    color: white;
+    padding: 8px 14px;
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+    background: none;
+    border: none;
+    cursor: pointer;
+    box-shadow: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+ 
+.nav-right {
+    display: flex;
+    gap: 10px;
+}
+ 
+/* Hover effects for pills and dropdown toggle */
+.hover-pill:hover,
+.dropdown-toggle:hover {
+    background: white;
+    color: black;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.35);
+}
+ 
+.hover-pill,
+.dropdown-toggle {
+    transition: transform 0.2s;
+}
+ 
+.hover-pill:hover,
+.dropdown-toggle:hover {
+    transform: translateY(-2px);
+}
+ 
+/* Dropdown container */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+ 
+/* Dropdown menu styling */
+.dropdown-menu {
+    display: none;
+}
+ 
+/* Show dropdown when toggled */
+.dropdown-menu.show {
+    display: block;
+}
+ 
+/* Logout link inside dropdown */
+.logout-link {
+    display: block;
+    position: fixed;
+    background-color: rgb(80, 118, 200);
+    padding: 8px 14px;
+    right: 50px;
+    top: 55px;
+    z-index: 1000;
+    border-radius: 5px;
+    min-width: 40px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: small;
+    border: none;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+}
+ 
+/* Hover effect for logout */
+.logout-link:hover {
+    background-color: white;
+    color: red;
+}
+ 
+ 
+/* Theme toggle button */
+.theme-toggle-btn {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: none;
+    padding-bottom: 3px;
+    color: white; /* Default color for light mode */
+    cursor: pointer;
+}
+
+
+/* === Flight Search Form === */
+h1 {
+    color:  #56c056;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.search-container {
+    background-color: rgb(27,31,35);
+    padding: 20px;
+    border-radius: 12px;
+    width: 320px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    margin-top: 20px;
+}
+
+.form-grid {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 1fr; /* Single column layout */
+    gap: 20px; /* Gap between form items */
+    padding: 20px; /* Sufficient padding for the form */
+}
+
+.form-group{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative; /* ADDED THIS LINE */
+}
+
+.label-container{
+    display:flex;
+}
+.input-container{
+    display:flex;
+}
+
+.form-group label {
+    margin-bottom: 8px;
+    font-size: 14px;
+    color:white;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: #f7f7f7;
+    color: #1e1e1e;
+}
+
+.form-group input:focus {
+    outline: 2px solid #56c056;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    background-color:  #56c056;
+    border: none;
+    border-radius: 6px;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #56c056;
+    transition: transform 0.2s;
+    transform: translateY(-2px);
+    box-shadow: 0 0 20px rgba(86, 192, 86, 0.3);
+}
+
+.error-message {
+    color: red;
+    margin-top: 20px;
+    text-align: center;
+    padding: 0 20px; /* Padding for the error message */
+}
+
+/* .submit-btn:hover {
+	background-color: #4caf50;
+} */
+
+
+/* === Flight Details=== */
+
+/* ============================
+ * ===== Main Content =====
+ * ============================ */
+
+/* Container for all flight cards */
+.table-container {
+    padding: 40px;
+    max-width: 1000px;
+    margin: 40px auto;
+}
+.body-head-titles{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.back-button{
+    background-color:#56c056;
+    color: white;
+    padding: 10px 10px;
+    border-radius: 8px;
+    text-decoration: none;
+    margin:5px 0px 0px 2px;
+    font-weight: bold;
+}
+
+.flight-details-title {
+    color:#56c056;
+    font-weight: 700;
+    margin: 0px;
+    text-align: center;
+    flex-grow: 1;
+    font-size: 30px;
+}
+/* Container for individual flight cards */
+.flight-card-container {
+    display: grid;
+    gap: 20px;
+    min-width: 900px;
+}
+
+/* Core card styling */
+.flight-card {
+    background-color:#262a2d;
+    border-radius: 8px;
+    box-shadow: rgba(86, 192, 86, 0.1) 0px 2px 8px 0px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Left section of the card (airline info) */
+.flight-info-left {
+    flex: 1;
+}
+
+.airline-details {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.airline-logo {
+    width: 40px;
+    height: 40px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.date-id-name-div {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.journey-date {
+    font-size: 1rem;
+    color: #487d08;
+    margin: 0;
+}
+
+.airline-name {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: white;
+    margin: 0;
+}
+
+.flight-id {
+    font-size: 0.9rem;
+    color: #e055cb;
+    margin: 0;
+}
+
+/* Middle section of the card (timing) */
+.flight-info-middle {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.timing-details {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    color: white;
+}
+
+.time-city {
+    text-align: center;
+}
+
+.time-city h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.time-city p {
+    font-size: 0.9rem;
+    color: grey;
+    margin: 5px 0 0 0;
+}
+
+/* Flight duration and type */
+.flight-divider {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 120px;
+}
+
+.duration-text {
+    font-size: 14px;
+    color: grey;
+    margin-bottom: 5px;
+}
+
+.flight-line {
+    width: 100%;
+    border-top: 3px solid #51e2c2;
+    border-radius: 2px;
+}
+
+.flight-label {
+    font-size: 12px;
+    color: grey;
+    margin-top: 5px;
+}
+
+/* Right section of the card (price and button) */
+.flight-info-right {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.price-and-book {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+}
+
+.price-display {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #33b30c;
+}
+
+.book-button {
+    background: linear-gradient(93deg, #53b2fe, #065af3);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.book-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* ============================
+ * ===== Responsive Design =====
+ * ============================ */
+
+@media (max-width: 900px) {
+    .navbar {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav-left, .nav-center, .nav-right {
+        flex: 1 1 100%;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .flight-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .flight-info-left,
+    .flight-info-middle,
+    .flight-info-right {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        flex: auto;
+    }
+
+    .timing-details {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .flight-divider {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .price-and-book {
+        align-items: center;
+    }
+}
+
+
+.footer {
+	margin-top: 20px;
+	text-align: center;
+	font-size: 12px;
+	color: #aaa;
+}
+
+.footer a {
+	color: var(--accent);
+	text-decoration: none;
+}
+
+.footer a:hover {
+	text-decoration: underline;
+}
+
+.suggestions {
+	position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+	background-color:   #333;
+	border: 1px solid #444;
+	border-radius: 6px;
+	max-height: 150px;
+	overflow-y: auto;
+	width: 100%;
+	z-index: 100;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.suggestions:empty {
+    display: none;
+}
+
+.suggestions div {
+	padding: 8px 10px;
+	cursor: pointer;
+	color: #fff;
+}
+
+.suggestions div:hover {
+	background-color:  #56c056;
+}
+
+/* === Results Section === */
+
+.results {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 0 40px;
+	box-sizing: border-box;
+}
+
+.results h2 {
+	text-align: center;
+	color: #56c056;
+	margin-bottom: 20px;
+}
+
+.table-wrapper {
+	width: 100%;
+	max-width: 1000px;
+}
+/* === Table Styling (unchanged) === */
+table {
+	width: 100%;
+	border-collapse: collapse;
+	color: #fff;
+	margin-top: 30px;
+	overflow-x: auto;
+	display: block;
+}
+
+th, td {
+	padding: 12px 16px;
+	border-bottom: 1px solid #56c056;
+	text-align: left;
+}
+
+th {
+	background-color: #56c056;
+	color: black;
+}
+
+tr:hover {
+	background-color: #3a3a3a;
+}
+
+/* === No Results Message === */
+.no-results {
+	text-align: center;
+	margin-top: 30px;
+	font-size: 18px;
+	color: #aaa;
+}

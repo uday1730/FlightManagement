@@ -1,0 +1,252 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: rgb(25, 26, 25);
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #121212;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Navbar layout */
+.navbar {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Left side of the navbar (logo and title) */
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+}
+
+.logo {
+    width: 36px;
+    height: 36px;
+    border-radius: 6px;
+}
+
+.userlogo {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+.site-title .brand {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: white;
+}
+
+.site-title .sub {
+    font-size: 0.8rem;
+    color: white;
+}
+
+/* Middle of the navbar (home pill) */
+.nav-center {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+/* Pill-shaped links and buttons */
+.home-pill,
+.pill,
+.dropdown-toggle {
+    color: white;
+    padding: 8px 14px;
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+    background: none;
+    border: none;
+    cursor: pointer;
+    box-shadow: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.nav-right {
+    display: flex;
+    gap: 10px;
+}
+
+/* Hover effects for pills and dropdown toggle */
+.hover-pill:hover,
+.dropdown-toggle:hover {
+    background: white;
+    color: black;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.35);
+}
+
+.hover-pill,
+.dropdown-toggle {
+    transition: transform 0.2s;
+}
+
+.hover-pill:hover,
+.dropdown-toggle:hover {
+    transform: translateY(-2px);
+}
+
+/* Dropdown menu for logout */
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: rgb(80, 118, 200);
+    padding: 8px 14px;
+    z-index: 1000;
+    border-radius: 5px;
+    min-width: 100px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.dropdown-menu.show {
+    display: block;
+}
+
+.dropdown-menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: small;
+    border: none;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+    display: block;
+}
+
+.dropdown-menu a:hover {
+    background-color: transparent;
+}
+
+
+
+/* Theme toggle button */
+.theme-toggle-btn {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: none;
+    padding-bottom: 3px;
+    color: white;
+    cursor: pointer;
+}
+
+
+.login-container {
+    background-color: #2f2f2f;
+    padding: 20px 40px 20px 40px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(86, 192, 86, 0.3);
+    width: 320px;
+}
+
+.login-container h2 {
+    text-align: center;
+    margin-bottom: 24px;
+    color: #56c056;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    background-color: #1e1e1e;
+    color: #fff;
+}
+
+.form-group input:focus {
+    outline: 2px solid #56c056;
+}
+
+.login-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #56c056;
+    border: none;
+    border-radius: 6px;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-btn:hover {
+    background-color: #4caf50;
+}
+
+.footer {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 12px;
+    color: #aaa;
+}
+
+.footer a {
+    color: #56c056;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* style.css */
+
+.form-group-item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.form-group-item label,
+.form-group-item select {
+    margin-bottom: 0.5rem;
+    background-color: rgb(30, 30, 30);
+}
+
+.form-group-item select {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}

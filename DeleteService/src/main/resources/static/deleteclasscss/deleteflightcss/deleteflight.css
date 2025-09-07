@@ -1,0 +1,186 @@
+@charset "UTF-8";
+
+ body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background-color: rgb(25, 26, 25);
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            scroll-behavior: smooth;
+        }
+
+        .site-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgb(25, 26, 25);
+            z-index: 1000;
+        }
+
+        .navbar {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 18px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .nav-left, .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo {
+            width: 36px;
+            height: 36px;
+            border-radius: 6px;
+        }
+
+        .site-title .brand {
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        .site-title .sub {
+            font-size: 0.8rem;
+            color: #98a0ad;
+        }
+
+        .nav-center {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+
+        .home-pill {
+            background: #56c056;
+            border: 1px solid rgb(238, 238, 238);
+            color: black;
+            padding: 8px 14px;
+            border-radius: 999px;
+            text-decoration: none;
+            font-weight: 600;
+            box-shadow: 0 6px 18px rgba(221, 224, 219, 0.1);
+        }
+
+        .home-pill:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 14px 32px rgba(109, 179, 63, 0.2);
+        }
+
+        .pill {
+            background: rgba(255, 255, 255, 0.1);
+            border: none;
+            color: #eafaf9;
+            padding: 10px 14px;
+            border-radius: 999px;
+            cursor: pointer;
+            font-weight: 600;
+            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.35); 
+            text-decoration: none;
+        }
+
+        .pill:hover {
+            transform: translateY(-6px) scale(1.02);
+            box-shadow: 0 18px 40px rgba(0, 0, 0, 0.6);
+        }
+
+        .sourcedestination-container {
+            background-color: #2f2f2f;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 0 14px rgba(86, 192, 86, 0.18);
+            width: 80%;
+            max-width: 600px;
+            margin-top: 120px;
+            margin-bottom: 40px;
+        }
+
+        .sourcedestination-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            margin-top: -10px;
+            font-size: 24px;
+            color: #56c056; 
+            
+        }
+
+      
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+            width: 100%;
+        }
+
+        .form-group label {
+            font-size: 19px;
+            font-weight: bold;
+            color: #eafaf9;
+            margin-bottom: 20px; 
+           
+            
+        }
+
+        .form-group input {
+            width: 200px;
+            padding: 10px;
+            border: none;
+            border-radius: 6px;
+            background-color: #1e1e1e;
+            color: #fff;
+            text-align: center;
+        }
+
+        .form-group input:focus {
+            outline: 2px solid #56c056;
+        }
+
+        .submit-btn {
+            width: 250px;
+            padding: 12px; 
+            font-size: 16px;  
+            background-color: #4caf50;
+            border: none;
+            border-radius: 6px;
+            color: #fff;
+            font-weight: bold;
+            cursor: pointer;
+            margin: 20px auto 0 auto;
+            display: block;
+        }
+
+        .submit-btn:hover {
+            background-color: #45a049;
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(76, 175, 80, 0.3);
+        }
+
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            background-color: #2f2f2f;
+            padding: 10px;
+            border-radius: 6px;
+            top: 100%;
+            right: 0;
+        }
+
+        .dropdown-menu.show {
+            display: block;
+        }
+        .status-message {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 16px;
+    color: #56c056;
+    font-weight: 500;
+}

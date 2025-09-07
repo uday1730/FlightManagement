@@ -1,0 +1,445 @@
+/*Light Theme*/
+@charset "UTF-8";
+
+/* ============================
+ * ===== Global Styles =====
+ * ============================ */
+
+/* General page layout and typography */
+body {
+    background-color: #f2f2f2;
+    font-family: 'Inter', sans-serif;
+    color: #000000; /* Adjusted for light theme readability */
+    margin: 0;
+    padding-top: 50px;
+}
+
+/* ============================
+ * ===== Header & Navbar =====
+ * ============================ */
+
+/* Main header container */
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgb(80, 118, 200);
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Navbar layout */
+.navbar {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Left side of the navbar (logo and title) */
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+}
+
+.logo {
+    width: 36px;
+    height: 36px;
+    border-radius: 6px;
+}
+
+.userlogo {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+.site-title .brand {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: white; /* Ensure text is visible on the blue background */
+}
+
+.site-title .sub {
+    font-size: 0.8rem;
+    color: white;
+}
+
+/* Middle of the navbar (home pill) */
+.nav-center {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+/* Pill-shaped links and buttons */
+.home-pill,
+.pill,
+.dropdown-toggle {
+    color: white;
+    padding: 8px 14px;
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+    background: none;
+    border: none;
+    cursor: pointer;
+    box-shadow: none;
+    display: flex; /* For alignment with userlogo */
+    align-items: center;
+    gap: 8px; /* Space between userlogo and text */
+}
+
+.nav-right {
+    display: flex;
+    gap: 10px;
+}
+
+/* Hover effects for pills and dropdown toggle */
+.hover-pill:hover,
+.dropdown-toggle:hover {
+    background: white;
+    color: rgb(80, 118, 200);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.35);
+}
+
+.hover-pill,
+.dropdown-toggle {
+    transition: transform 0.2s;
+}
+
+.hover-pill:hover,
+.dropdown-toggle:hover {
+    transform: translateY(-2px);
+}
+
+/* Dropdown menu for logout */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+ 
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: rgb(80, 118, 200);
+    padding: 8px 14px;
+    z-index: 1000;
+    border-radius: 5px;
+    min-width: 100px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.dropdown-menu.show {
+    display: block;
+}
+
+.dropdown-menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: small;
+    border: none;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+    display: block;
+}
+
+.dropdown-menu a:hover {
+    background-color: transparent;
+}
+
+#logout-link {
+    display: none;
+    position: fixed;
+    background-color: rgb(80, 118, 200);
+    padding: 8px 14px;
+    right: 62px;
+    top: 50px;
+    z-index: 1000;
+    border-radius: 5px;
+    min-width: 40px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: small;
+    border: none;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+}
+ 
+#logout-link.show {
+    display: block;
+}
+ 
+#logout-link:hover {
+    background-color: white;
+    color: red;
+}
+
+
+/* Theme toggle button */
+.theme-toggle-btn {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: none;
+    padding-bottom: 3px;
+    color: white; /* Default color for light mode */
+    cursor: pointer;
+}
+
+/*
+ * Note: The JavaScript in your HTML handles the theme icons and button color.
+ * The CSS here defines the base button style.
+ */
+
+/* ============================
+ * ===== Main Content =====
+ * ============================ */
+
+/* Container for all flight cards */
+.table-container {
+    padding: 40px;
+    max-width: 1000px;
+    margin: 0px auto;
+}
+.body-head-titles{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.back-button{
+    background-color: rgb(80, 118, 200);
+    color: white;
+    padding: 10px 10px;
+    border-radius: 8px;
+    text-decoration: none;
+    margin:5px 0px 0px 2px;
+    font-weight: bold;
+}
+
+.flight-details-title {
+    color:rgb(80, 118, 200);
+    font-weight: 700;
+    margin: 0px;
+    text-align: center;
+    flex-grow: 1;
+    font-size: 30px;
+}
+/* Container for individual flight cards */
+.flight-card-container {
+    display: grid;
+    gap: 20px;
+    min-width: 700px;
+}
+
+/* Core card styling */
+.flight-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 8px 0px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Left section of the card (airline info) */
+.flight-info-left {
+    flex: 1;
+}
+
+.airline-details {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.airline-logo {
+    width: 40px;
+    height: 40px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.date-id-name-div {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.journey-date {
+    font-size: 1rem;
+    color: #487d08;
+    margin: 0;
+}
+
+.airline-name {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: black;
+    margin: 0;
+}
+
+.flight-id {
+    font-size: 0.9rem;
+    color: #e055cb;
+    margin: 0;
+}
+
+/* Middle section of the card (timing) */
+.flight-info-middle {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.timing-details {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    color: black;
+}
+
+.time-city {
+    text-align: center;
+}
+
+.time-city h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.time-city p {
+    font-size: 0.9rem;
+    color: grey;
+    margin: 5px 0 0 0;
+}
+
+/* Flight duration and type */
+.flight-divider {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 120px;
+}
+
+.duration-text {
+    font-size: 14px;
+    color: grey;
+    margin-bottom: 5px;
+}
+
+.flight-line {
+    width: 100%;
+    border-top: 3px solid #51e2c2;
+    border-radius: 2px;
+}
+
+.flight-label {
+    font-size: 12px;
+    color: grey;
+    margin-top: 5px;
+}
+
+/* Right section of the card (price and button) */
+.flight-info-right {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.price-and-book {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+}
+
+.price-display {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #33b30c;
+}
+
+.book-button {
+    background: linear-gradient(93deg, #53b2fe, #065af3);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.book-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* ============================
+ * ===== Responsive Design =====
+ * ============================ */
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav-left, .nav-center, .nav-right {
+        flex: 1 1 100%;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .flight-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .flight-info-left,
+    .flight-info-middle,
+    .flight-info-right {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        flex: auto;
+    }
+
+    .timing-details {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .flight-divider {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .price-and-book {
+        align-items: center;
+    }
+}
