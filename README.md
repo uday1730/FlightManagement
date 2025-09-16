@@ -64,4 +64,4 @@ A comprehensive Flight Management System built using Spring Boot MVC and a micro
     http://localhost:[port]
     ```
 
-    Replace `[port]` with the configured port for your API Gateway.
+    Replace `[port]` with the configured port number for your API Gateway.
