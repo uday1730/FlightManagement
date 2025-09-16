@@ -1,5 +1,3 @@
-Here is the `README.md` file for your Flight Management System, based on the details you provided.
-
 ### ✈️ Flight Management System
 
 A comprehensive Flight Management System built using Spring Boot MVC and a microservices architecture. It enables users to view, search, and plan flights with robust backend services and a clean frontend interface.
